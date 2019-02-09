@@ -1,0 +1,27 @@
+{
+  "name": "javascript-quick-start",
+  "version": "1.0.0",
+  "description": "Javascript quick start",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm run pretty && npm run check",
+    "start": "babel-node src/index.js",
+    "watch": "nodemon",
+    "build": "npm run pretty && npm run check && babel src -d build",
+    "check": "eslint src/**/*.js --fix",
+    "pretty": "prettier --write src/**/**.js"
+  },
+  "author": "gustavolizze",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "eslint": "^5.13.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.16.4"
+  }
+}
